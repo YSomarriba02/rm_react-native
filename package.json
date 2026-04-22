@@ -10,9 +10,15 @@
   },
   "dependencies": {
     "expo": "~54.0.33",
+    "expo-image": "^55.0.9",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "^5.7.0"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-expo": "^55.0.0"
+  }
 }
