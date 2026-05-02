@@ -1,11 +1,16 @@
 import { View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { StyleSheet } from "react-native";
+import { useRouter } from "expo-router";
 
-export default function Card({ name, status, species, url }) {
+export default function Card({ name, status, species, url, id }) {
+
+    const router = useRouter()
     return (
-        <View>
-            <Pressable onPress={() => alert(`${name}`)} style={styles.view}>
+        <View style={styles.view}>
+            <Pressable style={styles.view} onPress={() => {
+                router.push(`/personaje/${id}`)
+            }}>
                 <Image source={{ uri: url }} style={styles.image} />
                 <Text style={styles.text}>{name}</Text>
             </Pressable>
